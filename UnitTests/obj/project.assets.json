@@ -6793,11 +6793,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_size/UnitTests/UnitTests.csproj",
+      "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_Size/UnitTests/UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "/Users/oskarbrozda/GitHub/Box_size/UnitTests/UnitTests.csproj",
+      "projectPath": "/Users/oskarbrozda/GitHub/Box_Size/UnitTests/UnitTests.csproj",
       "packagesPath": "/Users/oskarbrozda/.nuget/packages/",
-      "outputPath": "/Users/oskarbrozda/GitHub/Box_size/UnitTests/obj/",
+      "outputPath": "/Users/oskarbrozda/GitHub/Box_Size/UnitTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/oskarbrozda/.nuget/NuGet/NuGet.Config"
@@ -6813,8 +6813,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj": {
-              "projectPath": "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj"
+            "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj": {
+              "projectPath": "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj"
             }
           }
         }

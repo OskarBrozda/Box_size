@@ -8,5 +8,12 @@ namespace MyLib
         centimeter,
 		meter
     }
+
+    public enum ShortUnitOfMeasure
+    {
+        mm,
+        cm,
+        m
+    }
 }
 

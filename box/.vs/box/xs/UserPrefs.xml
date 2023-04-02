@@ -1,37 +1,47 @@
 ﻿<Properties StartupConfiguration="{3E3E6538-D643-4D9A-9017-991682B72C03}|Default">
-  <MonoDevelop.Ide.ItemProperties.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../UnitTests/UnitTestsPudelko.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Program/Program.cs">
     <Files>
-      <File FileName="Pudelko.cs" Line="9" Column="28" />
-      <File FileName="../Program/Program.cs" Line="11" Column="1" />
-      <File FileName="../UnitTests/UnitTestsPudelko.cs" Line="77" Column="37" />
+      <File FileName="../Program/Program.cs" Line="7" Column="33" IsPinned="True" />
+      <File FileName="Pudelko.cs" Line="29" Column="22" />
+      <File FileName="PudelkoKonwersja.cs" Line="6" Column="3" />
+      <File FileName="../UnitTests/UnitTestsPudelko.cs" Line="225" Column="10" />
+      <File FileName="Enums/UnitOfMeasure.cs" Line="7" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="box" expanded="True">
-            <Node name="MyLib" expanded="True" />
-            <Node name="Program" expanded="True" />
-            <Node name="UnitTests" expanded="True">
-              <Node name="UnitTestsPudelko.cs" selected="True" />
+            <Node name="MyLib" expanded="True">
+              <Node name="Enums" expanded="True" />
             </Node>
+            <Node name="Program" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="UnitTests" expanded="True" />
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="box" expanded="True">
-            <Node name="UnitTests" expanded="True" selected="True" />
+            <Node name="UnitTests" expanded="True">
+              <Node name="UnitTests" expanded="True">
+                <Node name="UnitTestsPudelkoConstructors" expanded="True">
+                  <Node name="Constructor_1param_InMeters_ArgumentOutOfRangeException (-1)" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Program PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Program PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

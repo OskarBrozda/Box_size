@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/oskarbrozda/GitHub/Box_size/Program/Program.csproj": {}
+    "/Users/oskarbrozda/GitHub/Box_Size/Program/Program.csproj": {}
   },
   "projects": {
-    "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj": {
+    "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj",
+        "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj",
         "projectName": "MyLib",
-        "projectPath": "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj",
+        "projectPath": "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj",
         "packagesPath": "/Users/oskarbrozda/.nuget/packages/",
-        "outputPath": "/Users/oskarbrozda/GitHub/Box_size/box/obj/",
+        "outputPath": "/Users/oskarbrozda/GitHub/Box_Size/box/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/oskarbrozda/.nuget/NuGet/NuGet.Config"
@@ -58,14 +58,14 @@
         }
       }
     },
-    "/Users/oskarbrozda/GitHub/Box_size/Program/Program.csproj": {
+    "/Users/oskarbrozda/GitHub/Box_Size/Program/Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_size/Program/Program.csproj",
+        "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_Size/Program/Program.csproj",
         "projectName": "Program",
-        "projectPath": "/Users/oskarbrozda/GitHub/Box_size/Program/Program.csproj",
+        "projectPath": "/Users/oskarbrozda/GitHub/Box_Size/Program/Program.csproj",
         "packagesPath": "/Users/oskarbrozda/.nuget/packages/",
-        "outputPath": "/Users/oskarbrozda/GitHub/Box_size/Program/obj/",
+        "outputPath": "/Users/oskarbrozda/GitHub/Box_Size/Program/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/oskarbrozda/.nuget/NuGet/NuGet.Config"
@@ -81,8 +81,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj": {
-                "projectPath": "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj"
+              "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj": {
+                "projectPath": "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj"
               }
             }
           }

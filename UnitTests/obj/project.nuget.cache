@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lGHBdCDzemdzdYRHs8pJY9WV/Zca1ojvwg78b8O1aVXhy18mN0nHJV9rPgWKSwpGdBj2roaEBE1sSTJlAAQhoQ==",
+  "dgSpecHash": "oBx6OLPR2kXiy4iNEmPH8loPyNwMoWIRLdOiJfsqrs2theSUvb/CAn9cnmrtXSPBKIwDhlUxFk4qpgW47azObw==",
   "success": true,
-  "projectFilePath": "/Users/oskarbrozda/GitHub/Box_size/UnitTests/UnitTests.csproj",
+  "projectFilePath": "/Users/oskarbrozda/GitHub/Box_Size/UnitTests/UnitTests.csproj",
   "expectedPackageFiles": [
     "/Users/oskarbrozda/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/oskarbrozda/.nuget/packages/microsoft.codecoverage/17.3.2/microsoft.codecoverage.17.3.2.nupkg.sha512",

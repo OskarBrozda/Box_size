@@ -1,53 +1,153 @@
 ﻿using System;
 using System.Linq;
-using P = MyLib.Pudelko;
 
 namespace MyLib
 {
-    public class Pudelko
+    public partial class Pudelko
     {
-        private double a { get; set; }
-        public double A
+        private double a;
+        public double A { get => Math.Round(a, 3, MidpointRounding.ToZero); }
+
+        private double b;
+        public double B { get => Math.Round(b, 3, MidpointRounding.ToZero); }
+
+        private double c;
+        public double C { get => Math.Round(c, 3, MidpointRounding.ToZero); }
+
+        private double objetosc;
+        public double Objetosc { get => Math.Round(objetosc, 9, MidpointRounding.ToZero); }
+
+        private double pole;
+        public double Pole { get => Math.Round(pole, 6, MidpointRounding.ToZero); }
+
+        #region Ctor's
+        public Pudelko(double a, double b, double c, UnitOfMeasure unit = UnitOfMeasure.meter)
         {
-            get => Math.Round(a, 3);
-            set
+            double multiplier;
+            switch (unit)
             {
-                if (value > 10 || value < 0) throw new ArgumentOutOfRangeException();
-                a = value;
+                case UnitOfMeasure.milimeter:
+                    multiplier = 0.001;
+                    break;
+                case UnitOfMeasure.centimeter:
+                    multiplier = 0.01;
+                    break;
+                case UnitOfMeasure.meter:
+                    multiplier = 1.0;
+                    break;
+                default:
+                    throw new ArgumentException("Nieznana jednostka miary.");
             }
+
+            if (Math.Round(a*multiplier, 3, MidpointRounding.ToZero) <= 0 || Math.Round(b * multiplier, 3, MidpointRounding.ToZero) <= 0 || Math.Round(c * multiplier, 3, MidpointRounding.ToZero) <= 0) throw new ArgumentOutOfRangeException("Wymiary pudełka muszą być większe lub równe 1mm.");
+            
+            if (a * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            this.a = a * multiplier;
+            if (b * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            this.b = b * multiplier;
+            if (c * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            this.c = c * multiplier;
+
+            objetosc = a * b * c * Math.Pow(multiplier, 3);
+            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
 
-        private double b { get; set; }
-        public double B
+        public Pudelko(double a, double b, UnitOfMeasure unit = UnitOfMeasure.meter)
         {
-            get => Math.Round(b, 3);
-            set
+            double c;
+            double multiplier;
+            switch (unit)
             {
-                if (value > 10 || value < 0) throw new ArgumentOutOfRangeException();
-                b = value;
+                case UnitOfMeasure.milimeter:
+                    multiplier = 0.001;
+                    c = 100;
+                    break;
+                case UnitOfMeasure.centimeter:
+                    multiplier = 0.01;
+                    c = 10;
+                    break;
+                case UnitOfMeasure.meter:
+                    multiplier = 1.0;
+                    c = 0.1;
+                    break;
+                default:
+                    throw new ArgumentException("Nieznana jednostka miary.");
             }
+
+            if (Math.Round(a * multiplier, 3, MidpointRounding.ToZero) <= 0 || Math.Round(b * multiplier, 3, MidpointRounding.ToZero) <= 0) throw new ArgumentOutOfRangeException("Wymiary pudełka muszą być większe lub równe 1mm.");
+            
+            if (a * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            this.a = a * multiplier;
+            if (b * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            this.b = b * multiplier;
+            
+            this.c = c * multiplier;
+            objetosc = a * b * c * Math.Pow(multiplier, 3);
+            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
 
-        private double c { get; set; }
-        public double C
+        public Pudelko(double a, UnitOfMeasure unit = UnitOfMeasure.meter)
         {
-            get => Math.Round(c, 3);
-            set
+            double b, c;
+            double multiplier;
+            switch (unit)
             {
-                if (value > 10 || value < 0) throw new ArgumentOutOfRangeException();
-                c = value;
+                case UnitOfMeasure.milimeter:
+                    multiplier = 0.001;
+                    c = b = 100;
+                    break;
+                case UnitOfMeasure.centimeter:
+                    multiplier = 0.01;
+                    c = b = 10;
+                    break;
+                case UnitOfMeasure.meter:
+                    multiplier = 1.0;
+                    c = b = 0.1;
+                    break;
+                default:
+                    throw new ArgumentException("Nieznana jednostka miary.");
             }
+
+            if (Math.Round(a * multiplier, 3, MidpointRounding.ToZero) <= 0) throw new ArgumentOutOfRangeException("Wymiary pudełka muszą być większe lub równe 1mm.");
+           
+            if (a * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            this.a = a * multiplier;
+            
+            this.b = b * multiplier;
+            this.c = c * multiplier;
+            objetosc = a * b * c * Math.Pow(multiplier, 3);
+            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
 
-        public UnitOfMeasure Measure { get; set; }
-          
-        public Pudelko(double a = 10, double b = 10, double c = 10, UnitOfMeasure unit = UnitOfMeasure.meter)
+        public Pudelko(UnitOfMeasure unit = UnitOfMeasure.meter)
         {
-            A = a;
-            B = b;
-            C = c;
-            Measure = unit;
+            double a, b, c;
+            double multiplier;
+            switch (unit)
+            {
+                case UnitOfMeasure.milimeter:
+                    multiplier = 0.001;
+                    a = c = b = 100;
+                    break;
+                case UnitOfMeasure.centimeter:
+                    multiplier = 0.01;
+                    a = c = b = 10;
+                    break;
+                case UnitOfMeasure.meter:
+                    multiplier = 1.0;
+                    a = c = b = 0.1;
+                    break;
+                default:
+                    throw new ArgumentException("Nieznana jednostka miary.");
+            }
+            this.a = a * multiplier;
+            this.b = b * multiplier;
+            this.c = c * multiplier;
+
+            objetosc = a * b * c * Math.Pow(multiplier, 3);
+            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
+        #endregion Ctor's
     }
 }
 
