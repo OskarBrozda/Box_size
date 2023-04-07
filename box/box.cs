@@ -3,22 +3,33 @@ using System.Linq;
 
 namespace MyLib
 {
-    public partial class Pudelko
+    public sealed partial class Pudelko
     {
-        private double a;
+        private readonly double a;
         public double A { get => Math.Round(a, 3, MidpointRounding.ToZero); }
 
-        private double b;
+        private readonly double b;
         public double B { get => Math.Round(b, 3, MidpointRounding.ToZero); }
 
-        private double c;
+        private readonly double c;
         public double C { get => Math.Round(c, 3, MidpointRounding.ToZero); }
 
-        private double objetosc;
-        public double Objetosc { get => Math.Round(objetosc, 9, MidpointRounding.ToZero); }
+        private readonly double objetosc;
+        public double Objetosc { get => Math.Round(A * B * C, 9, MidpointRounding.ToZero); }
 
-        private double pole;
-        public double Pole { get => Math.Round(pole, 6, MidpointRounding.ToZero); }
+        private readonly double pole;
+        public double Pole { get => Math.Round(2* (A * B + A * C + B * C), 6, MidpointRounding.ToZero); }
+
+        public double this[int index]
+        {
+            get
+            {
+                if (index == 0) return Math.Round(A, 3, MidpointRounding.ToZero);
+                else if (index == 1) return Math.Round(B, 3, MidpointRounding.ToZero);
+                else if (index == 2) return Math.Round(C, 3, MidpointRounding.ToZero);
+                else throw new ArgumentOutOfRangeException("Nieprawidłowy indeks.");
+            }
+        }
 
         #region Ctor's
         public Pudelko(double a, double b, double c, UnitOfMeasure unit = UnitOfMeasure.meter)
@@ -41,15 +52,10 @@ namespace MyLib
 
             if (Math.Round(a*multiplier, 3, MidpointRounding.ToZero) <= 0 || Math.Round(b * multiplier, 3, MidpointRounding.ToZero) <= 0 || Math.Round(c * multiplier, 3, MidpointRounding.ToZero) <= 0) throw new ArgumentOutOfRangeException("Wymiary pudełka muszą być większe lub równe 1mm.");
             
-            if (a * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            if (a * multiplier > 10 || b * multiplier > 10 || c * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
             this.a = a * multiplier;
-            if (b * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
             this.b = b * multiplier;
-            if (c * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
             this.c = c * multiplier;
-
-            objetosc = a * b * c * Math.Pow(multiplier, 3);
-            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
 
         public Pudelko(double a, double b, UnitOfMeasure unit = UnitOfMeasure.meter)
@@ -76,14 +82,10 @@ namespace MyLib
 
             if (Math.Round(a * multiplier, 3, MidpointRounding.ToZero) <= 0 || Math.Round(b * multiplier, 3, MidpointRounding.ToZero) <= 0) throw new ArgumentOutOfRangeException("Wymiary pudełka muszą być większe lub równe 1mm.");
             
-            if (a * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
+            if (a * multiplier > 10 || b * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
             this.a = a * multiplier;
-            if (b * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
-            this.b = b * multiplier;
-            
+            this.b = b * multiplier;            
             this.c = c * multiplier;
-            objetosc = a * b * c * Math.Pow(multiplier, 3);
-            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
 
         public Pudelko(double a, UnitOfMeasure unit = UnitOfMeasure.meter)
@@ -111,12 +113,9 @@ namespace MyLib
             if (Math.Round(a * multiplier, 3, MidpointRounding.ToZero) <= 0) throw new ArgumentOutOfRangeException("Wymiary pudełka muszą być większe lub równe 1mm.");
            
             if (a * multiplier > 10) throw new ArgumentOutOfRangeException("Wymiary pudełka nie mogą przekroczyć 10m.");
-            this.a = a * multiplier;
-            
+            this.a = a * multiplier;            
             this.b = b * multiplier;
             this.c = c * multiplier;
-            objetosc = a * b * c * Math.Pow(multiplier, 3);
-            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
 
         public Pudelko(UnitOfMeasure unit = UnitOfMeasure.meter)
@@ -143,9 +142,6 @@ namespace MyLib
             this.a = a * multiplier;
             this.b = b * multiplier;
             this.c = c * multiplier;
-
-            objetosc = a * b * c * Math.Pow(multiplier, 3);
-            pole = 2 * a * b * Math.Pow(multiplier, 2) + 2 * a * c * Math.Pow(multiplier, 2) + 2 * b * c * Math.Pow(multiplier, 2);
         }
         #endregion Ctor's
     }
