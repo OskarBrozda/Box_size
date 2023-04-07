@@ -15,10 +15,10 @@ namespace MyLib
         public double C { get => Math.Round(c, 3, MidpointRounding.ToZero); }
 
         private readonly double objetosc;
-        public double Objetosc { get => Math.Round(A * B * C, 9, MidpointRounding.ToZero); }
+        public double Objetosc { get => Math.Round(A * B * C, 9); }
 
         private readonly double pole;
-        public double Pole { get => Math.Round(2* (A * B + A * C + B * C), 6, MidpointRounding.ToZero); }
+        public double Pole { get => Math.Round(2* (A * B + A * C + B * C), 6); }
 
         public double this[int index]
         {
