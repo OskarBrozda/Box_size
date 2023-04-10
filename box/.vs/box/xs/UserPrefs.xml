@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{3E3E6538-D643-4D9A-9017-991682B72C03}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="../Program/Program.cs">
     <Files>
-      <File FileName="../Program/Program.cs" Line="7" Column="33" IsPinned="True" />
-      <File FileName="Pudelko.cs" Line="29" Column="22" />
-      <File FileName="PudelkoKonwersja.cs" Line="6" Column="3" />
-      <File FileName="../UnitTests/UnitTestsPudelko.cs" Line="225" Column="10" />
-      <File FileName="Enums/UnitOfMeasure.cs" Line="7" Column="13" />
+      <File FileName="../Program/Program.cs" Line="5" Column="2" NotebookId="1" IsPinned="True" />
+      <File FileName="Pudelko.cs" Line="6" Column="15" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="1009" Y="1566" Width="1093" Height="703">
+        <Files>
+          <File FileName="boxComparision.cs" Line="26" Column="45" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="box" expanded="True">
-            <Node name="MyLib" expanded="True">
-              <Node name="Enums" expanded="True" />
-            </Node>
+            <Node name="MyLib" expanded="True" />
             <Node name="Program" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
@@ -26,9 +28,7 @@
           <Node name="box" expanded="True">
             <Node name="UnitTests" expanded="True">
               <Node name="UnitTests" expanded="True">
-                <Node name="UnitTestsPudelkoConstructors" expanded="True">
-                  <Node name="Constructor_1param_InMeters_ArgumentOutOfRangeException (-1)" selected="True" />
-                </Node>
+                <Node name="UnitTestsPudelkoConstructors" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -36,12 +36,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Program PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

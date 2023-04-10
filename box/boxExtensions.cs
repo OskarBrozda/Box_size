@@ -9,6 +9,6 @@ namespace MyLib
             double x = Math.Pow(p.Objetosc, 1.0 / 3);
             return new Pudelko(x, x, x);
         }
-	}
+    }
 }
 
