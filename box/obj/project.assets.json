@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj",
+      "projectUniqueName": "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj",
       "projectName": "MyLib",
-      "projectPath": "/Users/oskarbrozda/GitHub/Box_size/box/MyLib.csproj",
+      "projectPath": "/Users/oskarbrozda/GitHub/Box_Size/box/MyLib.csproj",
       "packagesPath": "/Users/oskarbrozda/.nuget/packages/",
-      "outputPath": "/Users/oskarbrozda/GitHub/Box_size/box/obj/",
+      "outputPath": "/Users/oskarbrozda/GitHub/Box_Size/box/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/oskarbrozda/.nuget/NuGet/NuGet.Config"
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }
